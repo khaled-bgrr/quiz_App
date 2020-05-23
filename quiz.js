@@ -51,7 +51,8 @@ startGame = () => {
 }
 getNewQuestion = () => {
   if(availbleQuestions.length===0 || questionCounter>=MAX_QUESTIONS){
-    //go to end page
+      //go to end page END-GAME
+    localStorage.setItem('mostRecentScore',score);
     return window.location.assign("/end.html");
   }
     questionCounter++;
